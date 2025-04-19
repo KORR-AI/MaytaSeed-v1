@@ -1,30 +1,41 @@
-# MaytaSeed-v1
+# Raydium Liquidity Pool Creator
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+This application allows users to create and seed SOL liquidity pools for any Solana token, including Token-2022 tokens.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/dragunkorr-gmailcoms-projects/v0-mayta-seed-v1)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/XtqgozmUsK3)
+## Direct Raydium Protocol Implementation
 
-## Overview
+This project uses a direct implementation of the Raydium protocol to create liquidity pools without relying on the Raydium SDK, which has compatibility issues with bn.js. Instead, we:
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+1. Directly interact with the Raydium Liquidity Program
+2. Create and initialize the necessary accounts
+3. Build and send the required transactions
 
-## Deployment
+This approach avoids the "The 'bn.js' module does not provide an export named 'isBN'" error completely while still creating real, functional Raydium liquidity pools.
 
-Your project is live at:
+## Features
 
-**[https://vercel.com/dragunkorr-gmailcoms-projects/v0-mayta-seed-v1](https://vercel.com/dragunkorr-gmailcoms-projects/v0-mayta-seed-v1)**
+- Create real SOL liquidity pools for any Solana token
+- Support for Token-2022 tokens
+- Check if a pool already exists for a token pair
+- Track your created pools
+- Detailed guide on how to create and manage liquidity pools
 
-## Build your app
+## Technical Details
 
-Continue building your app on:
+- Uses Next.js App Router
+- Connects to Solana using Alchemy RPC
+- Directly interacts with Raydium Liquidity Program
+- Stores pool creation data in Supabase
+- Supports Phantom wallet for transactions
 
-**[https://v0.dev/chat/projects/XtqgozmUsK3](https://v0.dev/chat/projects/XtqgozmUsK3)**
+## Development
 
-## How It Works
+\`\`\`bash
+npm run dev
+\`\`\`
 
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+## Building for Production
+
+\`\`\`bash
+npm run build
+npm run start

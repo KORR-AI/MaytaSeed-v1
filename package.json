@@ -60,11 +60,14 @@
     "zod": "^3.24.1",
     "@solana/web3.js": "latest",
     "@solana/wallet-adapter-react": "latest",
+    "@supabase/supabase-js": "latest",
+    "bn.js": "latest",
+    "fs": "latest",
+    "path": "latest",
+    "@solana/spl-token": "latest",
     "@solana/wallet-adapter-base": "latest",
     "@solana/wallet-adapter-react-ui": "latest",
-    "@solana/wallet-adapter-wallets": "latest",
-    "bn.js": "latest",
-    "@supabase/supabase-js": "latest"
+    "@solana/wallet-adapter-wallets": "latest"
   },
   "devDependencies": {
     "@types/node": "^22",
